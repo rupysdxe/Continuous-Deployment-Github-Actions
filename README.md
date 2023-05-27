@@ -26,6 +26,7 @@ Usually
             docker-compose.yml
             Dockerfile
 
+
 3. Secrets
     secrets.HOST - Server IP
     secrets.USERNAME - Server USERNAME
