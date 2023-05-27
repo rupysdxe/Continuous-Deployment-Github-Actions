@@ -27,7 +27,7 @@
 
     ```yaml
     
-    		- name: copy file via SCP
+    	 - name: copy file via SCP
          uses: appleboy/scp-action@v0.1.4
          with:
            host: ${{ secrets.HOST }}
@@ -46,7 +46,7 @@
 
    ```yaml
    
-    		- name: executing remote via SSH
+    	 - name: executing remote via SSH
          uses: appleboy/ssh-action@v0.1.10
          with:
            host: ${{ secrets.HOST }}
