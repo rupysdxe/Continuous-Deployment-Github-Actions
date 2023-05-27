@@ -7,6 +7,7 @@
    steps:
 
    ```yaml
+   
     steps:
        - uses: actions/checkout@v2
        - name: Set up JDK 1.8
@@ -17,6 +18,7 @@
          run: |
            cd project-1
            gradle build
+           
    ```
 
    
@@ -24,6 +26,7 @@
 2. Next using Secure Copy Protocol we transfer our jar to a Remote Server.
 
     ```yaml
+    
     		- name: copy file via SCP
          uses: appleboy/scp-action@v0.1.4
          with:
@@ -34,6 +37,7 @@
            target: SB/jars
            rm: true
            strip_components: 3
+           
     ```
 
    
@@ -41,6 +45,7 @@
 3. Next using Secure Socket Shell we log into our server, and run our spring boot inside docker container. See Dockerfile and docker-compose.yml
 
    ```yaml
+   
     		- name: executing remote via SSH
          uses: appleboy/ssh-action@v0.1.10
          with:
@@ -51,6 +56,7 @@
              cd SB
              sudo docker-compose down
              sudo docker-compose up --build -d
+             
    ```
 
    
